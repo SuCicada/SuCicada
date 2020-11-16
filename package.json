@@ -1,0 +1,8 @@
+{
+  "name": "SuCicada",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "js-yaml": "^3.14.0"
+  }
+}
