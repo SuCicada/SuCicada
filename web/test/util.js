@@ -1,7 +1,6 @@
 function all(...s) {
     res = []
-    indexs = s.map(arr => arr.length)
-    index = Array(indexs.length).fill(0)
+    index = Array(s.length).fill(0)
 
     function loop(n) {
         if (n === index.length) {
@@ -14,12 +13,11 @@ function all(...s) {
         }
         for (let i = 0; i < s[n].length; i++) {
             index[n] = i
-            console.log("start ",n, i, index)
+            // console.log("start ",n, i, index)
             loop(n + 1)
-            console.log("end   ",n, i, index)
+            // console.log("end   ",n, i, index)
         }
     }
-
     loop(0)
     return res
 }
