@@ -16,8 +16,8 @@ function say(...s) {
 
 function all(...s) {
     console.log(s)
-    res = []
-    index = Array(s.length).fill(0)
+    let res = []
+    let index = Array(s.length).fill(0)
 
     function loop(n) {
         if (n === index.length) {
