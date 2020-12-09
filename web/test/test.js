@@ -55,7 +55,7 @@ function init() {
 var pro = Promise
     .all([
         slow("1111", 1000)
-        , slow("2222", 2000)
+        , slow("2222", 1210)
     ])
 
 pro.then(() => slow("3.1", 1000,["?????","sdfsdf"]))

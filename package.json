@@ -1,9 +1,0 @@
-{
-  "name": "SuCicada",
-  "version": "1.0.0",
-  "dependencies": {
-    "js-yaml": "^3.14.0",
-    "mathjs": "^8.0.1",
-    "pythonic": "^2.0.3"
-  }
-}
