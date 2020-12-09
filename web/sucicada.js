@@ -1,5 +1,6 @@
 IMPORT_JS = ["https://cdn.jsdelivr.net/npm/marked/marked.min.js"
     , "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
+    , "utils.js"
 ]
 
 function getPromise(func, ...args) {
@@ -43,7 +44,7 @@ function loadMD(resolve, md) {
     xmlHttp.onreadystatechange = function () {
         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
             let src = xmlHttp.responseText
-            // console.log(md[1], src)
+            console.log("load success: " + md[0])
             // console.log(resolve.toString())
             resolve([md[1], src])
             // resolve(src, md[1])

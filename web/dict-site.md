@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dict-Site</title>
-</head>
-<body>
+- https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS
+- https://segmentfault.com/
+- https://juejin.cn/
+- OpenJS Foundation
 
-</body>
-</html>
+ 
