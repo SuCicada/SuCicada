@@ -5,3 +5,11 @@
 - wsl
 
 - scalajs
+- electron
+    - nimblenote
+- grafana_api
+- g2ww: grafana -> webcom
+- node-request
+- node-telegraf
+- ssh-chat
+- node-electron

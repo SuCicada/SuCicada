@@ -1,5 +1,7 @@
-IMPORT_JS = ["https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+IMPORT_JS = [
+    "https://cdn.jsdelivr.net/npm/marked/marked.min.js"
     , "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
+    , "https://cdn.bootcdn.net/ajax/libs/js-yaml/3.9.1/js-yaml.min.js"
     , "utils.js"
 ]
 
@@ -50,6 +52,7 @@ function loadMD(resolve, md) {
             // resolve(src, md[1])
         }
     }
+    // console.log(md)
     xmlHttp.open('GET', md[0]);
     xmlHttp.send();
     return this
@@ -76,10 +79,12 @@ function addMD(mdList) {
 function goto(md, changeUrl = true) {
     console.log('goto:' + md, 'changeUrl:' + changeUrl)
     if (changeUrl) {
-        let newSearch = getUrlSearch().set('md', md)
+        let encodeMd = encodeURIComponent(md)
+        let newSearch = niceObject(getUrlSearch()).set('md', encodeMd)
         history.pushState({md: md}, md, toUrlSearch(newSearch))
     }
-    // todo history.pushState 改变地址栏, 设置初始地址栏监听, 进行伪页面跳转
+    md = decodeURIComponent(md)
+    // console.log(md)
     let masterDiv = document.getElementById("master")
     masterDiv.innerHTML = ''
     let mdDiv = document.createElement("div")
@@ -92,16 +97,17 @@ Array.prototype.foldLeft = function (sum, fun) {
     //    fun: (sum,a)=>sum
     return this.length ? this.foldLeft(fun(sum, this.shift()), fun) : sum
 }
-Object.prototype.items = function () {
-    return Object.entries(this)
-}
-Object.prototype.empty = function () {
-    return Object.keys(this).length === 0
-}
-Object.prototype.set = function (k, v) {
-    this[k] = v
-    return this
-}
+
+// Object.items = function () {
+//     return Object.entries(this)
+// }
+// Object.empty = function () {
+//     return Object.keys(this).length === 0
+// }
+// Object.set = function (k, v) {
+//     this[k] = v
+//     return this
+// }
 
 function getUrlSearch() {
     return !location.search.length ? {} :
@@ -119,8 +125,40 @@ function getUrlSearch() {
 }
 
 function toUrlSearch(obj) {
-    console.log(obj)
+    // console.log(obj)
+    niceObject(obj)
     return obj.empty() ? '' : '?' + obj.items().map((a) => a.join('=')).join('&')
+}
+
+function loadMenu() {
+    let a = (location.origin + location.pathname)
+    a = a.substr(0, a.lastIndexOf('/') + 1)
+    let yaml = "sucicada.yaml"
+    // yaml = a + yaml
+
+    console.log(yaml)
+    // let res = $.ajax({
+    //     url: yaml,
+    //     type: "GET",//请求方式为get
+    //     dataType: "json", //返回数据格式为json
+    //     success: function (a) {
+    //         console.log(a)
+    //     }
+    // });
+
+    $.get(yaml,
+        function (data) {
+            // alert(1)
+            console.log(data)
+        })
+    // console.log(res.responseText)
+    // console.log(jsyaml.load())
+}
+
+function init() {
+    let md = getUrlSearch()['md']
+    md ? goto(md, false) : goto('index', true)
+    loadMenu()
 }
 
 // loadJSPromise.then(() => {
@@ -134,12 +172,10 @@ window.onload = (() => {
         }
     }
 
-    let md = getUrlSearch()['md']
-    md ? goto(md, false) : goto('index', true)
 
-
-    // loadJSPromise.
     loadJSPromise.then(() => {
+        init()
+        // loadJSPromise.
         // <a class="goto-md" href="#" onclick="goto('index')">最后的家园</a>
         $(".goto-md")
             .attr("href", "javascript:void(0)")
