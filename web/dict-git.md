@@ -13,3 +13,5 @@
 - node-telegraf
 - ssh-chat
 - node-electron
+- [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
+- [scrcpy](https://github.com/Genymobile/scrcpy)

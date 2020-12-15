@@ -86,7 +86,7 @@
 - 认知图谱
 - [为什么不要直接在Object.prototype上定义方法？(JavaScript)](https://www.zhihu.com/question/26924011)
   https://stackoverflow.com/questions/1827458/prototyping-object-in-javascript-breaks-jquery
-    
+- [The Unlambda Programming Language](http://www.madore.org/~david/programs/unlambda/)
     
     
     

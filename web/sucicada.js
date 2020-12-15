@@ -5,9 +5,10 @@ IMPORT_JS = [
     , "utils.js"
 ]
 
+/* func 是非阻塞原函数， resolve是then后的函数 */
 function getPromise(func, ...args) {
     return new Promise(function (resolve) {
-        func(resolve, ...args)
+        func(...args, resolve)
     })
 }
 
@@ -29,6 +30,27 @@ const loadJSPromise =
     Promise.all(IMPORT_JS.map(js => {
         return loadJS(js)
     }))
+yaml = 'sucicada.yaml'
+
+const loadConf = loadJSPromise
+    .then(() => getPromise($.get, yaml))
+    .then(data => jsyaml.load(data))
+
+// (data) => {
+//     let menuIndex = getUrlSearch()['menu']
+//     let menuDiv = $("#menu")
+//     jsyaml.load(data)['menu'].forEach((bar) => {
+//         menuDiv.append(
+//             $('<a></a>')
+//                 .attr("href", "javascript:void(0)")
+//                 .text(bar['text'])
+//                 .click((e, a) => {
+//                     // let gotoMd = $(e.target).attr("goto")
+//                     let gotoMd = bar['md']
+//                     gotoMd !== getUrlSearch()['md'] && goto(gotoMd)
+//                 }))
+//     })
+// })
 
 function loadJS(js) {
     let script = document.createElement('script')
@@ -41,7 +63,7 @@ function loadJS(js) {
     })
 }
 
-function loadMD(resolve, md) {
+function loadMD(md, resolve) {
     let xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function () {
         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
@@ -93,6 +115,48 @@ function goto(md, changeUrl = true) {
     masterDiv.appendChild(mdDiv)
 }
 
+function equalsIgnoreURICode(a, b) {
+    // console.log(decodeURIComponent(a) , decodeURIComponent(b))
+    // console.log(decodeURIComponent(a) === decodeURIComponent(b))
+    return decodeURIComponent(a) === decodeURIComponent(b)
+}
+
+function showMenu(menu, changeUrl = true) {
+    console.log('menu:' + menu)
+    if (changeUrl) {
+        let encode = encodeURIComponent(menu)
+        let newSearch = niceObject(getUrlSearch()).set('menu', encode)
+        history.pushState({newSearch: newSearch}, newSearch, toUrlSearch(newSearch))
+    }
+    loadConf
+        .then((data) => {
+            let menuObj = data['menus'][menu]
+            let menuDiv = $("#menu").html('')
+            menuObj.forEach((bar) => {
+                menuDiv.append(
+                    $('<a></a>')
+                        .attr("href", "javascript:void(0)")
+                        .text(bar['text'])
+                        .click((e, a) => {
+                            // let gotoMd = $(e.target).attr("goto")
+                            let gotoMd = bar['md'] /* 要跳转的md */
+                            let dir = bar['menu'] /* 要切换的目录 */
+                            let search = getUrlSearch()
+                            // console.log(bar)
+                            // console.log(search)
+                            // (gotoMd === 'index' ? '' : (dir + '/')) +
+                            // console.log(gotoMd && !equalsIgnoreURICode(gotoMd, search['md']) )
+                            gotoMd && !equalsIgnoreURICode(gotoMd, search['md']) && goto(gotoMd)
+                            dir && !equalsIgnoreURICode(dir, search['menu']) && showMenu(dir)
+                            // if (gotoMd) {
+                            // } else if (dir) {
+                            // }
+                        }))
+                    .append($('<span></span>').text(" | "))
+            })
+        })
+}
+
 Array.prototype.foldLeft = function (sum, fun) {
     //    fun: (sum,a)=>sum
     return this.length ? this.foldLeft(fun(sum, this.shift()), fun) : sum
@@ -130,35 +194,12 @@ function toUrlSearch(obj) {
     return obj.empty() ? '' : '?' + obj.items().map((a) => a.join('=')).join('&')
 }
 
-function loadMenu() {
-    let a = (location.origin + location.pathname)
-    a = a.substr(0, a.lastIndexOf('/') + 1)
-    let yaml = "sucicada.yaml"
-    // yaml = a + yaml
-
-    console.log(yaml)
-    // let res = $.ajax({
-    //     url: yaml,
-    //     type: "GET",//请求方式为get
-    //     dataType: "json", //返回数据格式为json
-    //     success: function (a) {
-    //         console.log(a)
-    //     }
-    // });
-
-    $.get(yaml,
-        function (data) {
-            // alert(1)
-            console.log(data)
-        })
-    // console.log(res.responseText)
-    // console.log(jsyaml.load())
-}
-
 function init() {
-    let md = getUrlSearch()['md']
+    let search = getUrlSearch()
+    let md = search['md']
+    let menu = search['menu']
+    menu ? showMenu(menu, false) : showMenu('index', true)
     md ? goto(md, false) : goto('index', true)
-    loadMenu()
 }
 
 // loadJSPromise.then(() => {
@@ -172,17 +213,14 @@ window.onload = (() => {
         }
     }
 
-
     loadJSPromise.then(() => {
         init()
-        // loadJSPromise.
-        // <a class="goto-md" href="#" onclick="goto('index')">最后的家园</a>
-        $(".goto-md")
-            .attr("href", "javascript:void(0)")
-            .click((e, a) => {
-                let gotoMd = $(e.target).attr("goto")
-                gotoMd !== getUrlSearch()['md'] && goto(gotoMd)
-            })
+        // $(".goto-md")
+        // .attr("href", "javascript:void(0)")
+        // .click((e, a) => {
+        //     let gotoMd = $(e.target).attr("goto")
+        //     gotoMd !== getUrlSearch()['md'] && goto(gotoMd)
+        // })
     })
 })
 // })

@@ -2,5 +2,6 @@
 - https://segmentfault.com/
 - https://juejin.cn/
 - OpenJS Foundation
-
+- https://www.raspberrypi.org/
+- https://hellogithub.com/
  
