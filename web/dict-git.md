@@ -1,0 +1,17 @@
+- nedb
+- sqlite3
+- node-sqlite3
+- nodejs
+- wsl
+
+- scalajs
+- electron
+    - nimblenote
+- grafana_api
+- g2ww: grafana -> webcom
+- node-request
+- node-telegraf
+- ssh-chat
+- node-electron
+- [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
+- [scrcpy](https://github.com/Genymobile/scrcpy)

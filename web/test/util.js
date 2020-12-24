@@ -18,9 +18,23 @@ function all(...s) {
             // console.log("end   ",n, i, index)
         }
     }
+
     loop(0)
     return res
 }
 
-res = all([1, 2, 3, 5], ["af", "qer", "f"])
-console.log(res)
+// res = all([1, 2, 3, 5], ["af", "qer", "f"])
+// console.log(res)
+// Object.defineProperties(Object.prototype,
+//     {
+//         "items": {value: Object.entries(this)}
+//         , "empty": {
+//             value: function () {
+//                 return Object.keys(this).length === 0
+//             }
+//         }
+//     }
+// )
+a = {}
+console.log(a.empty())
+// obj.empty() ? '' : '?' + obj.items().map((a) => a.join('=')).join('&')

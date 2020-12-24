@@ -1,0 +1,41 @@
+menus:
+  index:
+    - md: index
+      text: 最后的家园
+    - md: mind-study
+      text: 灵感-议题
+    - md: dict-site
+      text: 很有用的网站
+    - md: dict-git
+      text: 有趣的Git
+    - md: knowledge
+      text: 知识记录
+    - md: artist
+      text: 好的作品
+    - md: todo
+      text: 网站待做(可以帮忙谋划)
+    - md: sucicada
+      text: 关于我
+    - menu: task
+      md: task/summary
+      text: 任务项
+    - md: lyrics
+      text: 歌词[wait]
+
+  task:
+    - menu: index
+      md: index
+      text: 回家
+    - md: task/summary
+      text: summary
+
+
+
+
+
+
+
+
+
+
+

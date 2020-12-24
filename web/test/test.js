@@ -55,14 +55,17 @@ function init() {
 var pro = Promise
     .all([
         slow("1111", 1000)
-        , slow("2222", 2000)
+        , slow("2222", 1210)
     ])
 
-pro.then(() => slow("3.1", 1000,["?????","sdfsdf"]))
+pro.then(() => slow("3.1", 1000, ["?????", "sdfsdf"]))
     .then((...res) => {
         console.log(...res)
         console.log("333111")
+        return res
     })
+    .then(a => a+1)
+    .then((a) => console.log(a))
 
 // pro.then(() => slow("3.2", 100))
 //     .then((res) => console.log("333222"))
@@ -75,4 +78,4 @@ function aa(a, ...aa) {
 // aa(11, 1, 1, 1, 1)
 
 
-https://f5b1452c-1837-11eb-a8bf-f23c91cfbbc9:abc2336d091894f5ead8af8836b89478@de-cn2.ghelper.net:443/#Frankfurt
+// https://f5b1452c-1837-11eb-a8bf-f23c91cfbbc9:abc2336d091894f5ead8af8836b89478@de-cn2.ghelper.net:443/#Frankfurt

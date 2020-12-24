@@ -1,14 +1,14 @@
 Overload = function (fn_objs) {
     var is_match = function (x, y) {
-        if (x == y) return true;
-        if (x.indexOf("*") == -1) return false;
+        if (x === y) return true;
+        if (x.indexOf("*") === -1) return false;
 
         var x_arr = x.split(","), y_arr = y.split(",");
-        if (x_arr.length != y_arr.length) return false;
+        if (x_arr.length !== y_arr.length) return false;
 
         while (x_arr.length) {
             var x_first = x_arr.shift(), y_first = y_arr.shift();
-            if (x_first != "*" && x_first != y_first) return false;
+            if (x_first !== "*" && x_first !== y_first) return false;
         }
         return true;
     };
@@ -23,7 +23,7 @@ Overload = function (fn_objs) {
 
         for (var i = 0; i < args_len; i++) {
             var type = typeof args[i];
-            type == "object" && (args[i].length > -1) && (type = "array");
+            type === "object" && (args[i].length > -1) && (type = "array");
             args_types.push(type);
         }
         args_type = args_types.join(",");
@@ -53,3 +53,33 @@ String.prototype.format = Overload({
         });
     }
 });
+
+
+function niceObject(obj) {
+    // Object.prototype
+    Object.defineProperties(obj,
+        {
+            "items": {
+                value: () => {
+                    console.log(obj)
+                    return Object.entries(obj)
+                }
+                , configurable: true
+            }
+            , "empty": {
+                value: () => {
+                    return Object.keys(obj).length === 0
+                }
+                , configurable: true
+            }
+            , "set": {
+                value: (k, v) => {
+                    obj[k] = v
+                    return obj
+                }
+                , configurable: true
+            }
+        }
+    )
+    return obj
+}
