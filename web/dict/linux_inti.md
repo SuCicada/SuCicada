@@ -23,9 +23,11 @@ sudo -v
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt install docker-ce -y
+sudo service docker start 
 sudo usermod -aG docker ${USER}
-sudo service docker restart 
+sudo service docker restart
 
+sudo mkdir -p /etc/docker/ ; sudo touch /etc/docker/daemon.json
 echo '{"registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]}' | sudo tee /etc/docker/daemon.json
 ```
 
@@ -45,4 +47,12 @@ echo deb-src https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_14.x focal main
 ```
 sudo apt-get install openjdk-8-jdk -y
 sudo apt install scala -y
+```
+
+### ruby
+```
+sudo add-apt-repository ppa:brightbox/ruby-ng
+sudo apt-get update
+sudo apt-get purge --auto-remove ruby
+sudo apt-get install ruby2.7 ruby2.7-dev
 ```

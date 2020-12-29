@@ -98,7 +98,7 @@ function addMD(mdList) {
 
 
 // goto new web
-function goto(md, changeUrl = true) {
+function showMd(md, changeUrl = true) {
     console.log('goto:' + md, 'changeUrl:' + changeUrl)
     if (changeUrl) {
         let encodeMd = encodeURIComponent(md)
@@ -120,13 +120,15 @@ function equalsIgnoreURICode(a, b) {
     // console.log(decodeURIComponent(a) === decodeURIComponent(b))
     return decodeURIComponent(a) === decodeURIComponent(b)
 }
+function changeUrl(obj){
 
+}
 function showMenu(menu, changeUrl = true) {
     console.log('menu:' + menu)
     if (changeUrl) {
         let encode = encodeURIComponent(menu)
         let newSearch = niceObject(getUrlSearch()).set('menu', encode)
-        history.pushState({newSearch: newSearch}, newSearch, toUrlSearch(newSearch))
+        history.pushState({menu: menu}, menu, toUrlSearch(newSearch))
     }
     loadConf
         .then((data) => {
@@ -146,7 +148,7 @@ function showMenu(menu, changeUrl = true) {
                             // console.log(search)
                             // (gotoMd === 'index' ? '' : (dir + '/')) +
                             // console.log(gotoMd && !equalsIgnoreURICode(gotoMd, search['md']) )
-                            gotoMd && !equalsIgnoreURICode(gotoMd, search['md']) && goto(gotoMd)
+                            gotoMd && !equalsIgnoreURICode(gotoMd, search['md']) && showMd(gotoMd)
                             dir && !equalsIgnoreURICode(dir, search['menu']) && showMenu(dir)
                             // if (gotoMd) {
                             // } else if (dir) {
@@ -194,27 +196,31 @@ function toUrlSearch(obj) {
     return obj.empty() ? '' : '?' + obj.items().map((a) => a.join('=')).join('&')
 }
 
-function init() {
+function showPage() {
     let search = getUrlSearch()
     let md = search['md']
     let menu = search['menu']
     menu ? showMenu(menu, false) : showMenu('index', true)
-    md ? goto(md, false) : goto('index', true)
+    md ? showMd(md, false) : showMd('index', true)
 }
 
 // loadJSPromise.then(() => {
 window.onload = (() => {
     window.onpopstate = (e) => {
+        showPage()
         if (e.state) {
-            let md = e.state['md']
-            console.log(md)
             console.log(e)
-            goto(md, false)
+            let md = e.state['md']
+            let menu = e.state['menu']
+            console.log(md)
+            console.log(menu)
+            // showMenu(menu, false)
+            // showMd(md, false)
         }
     }
 
     loadJSPromise.then(() => {
-        init()
+        showPage()
         // $(".goto-md")
         // .attr("href", "javascript:void(0)")
         // .click((e, a) => {
