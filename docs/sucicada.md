@@ -1,5 +1,5 @@
-- [summary-task](?md=task/summary.md)
-- [关于屠龙之术](?md=log/关于屠龙之术.md)
+- [summary-task](task/summary.md)
+- [关于屠龙之术](log/关于屠龙之术.md)
 我是谁。我意图通过解释人的认知来解决关于人的不可控的心理活动的问题。
 
 我们致力于通过表里并行的方式来解决边缘性人格障碍。

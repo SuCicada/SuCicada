@@ -87,11 +87,13 @@ function addMD(mdList) {
             loadJSPromise
                 .then(() => getPromise(loadMD, md))
                 .then((md) => {
-                    document.getElementById(md[0]).innerHTML =
-                        marked(md[1], {
-                            breaks: true
-                            , gfm: true
-                        })
+                    let res = marked(md[1], {
+                        breaks: true
+                        , gfm: true
+                    })
+                    console.log(res)
+                    document.getElementById(md[0]).innerHTML = res
+                    console.log(document.getElementById(md[0]))
                 })
         )
 }
@@ -100,11 +102,11 @@ function addMD(mdList) {
 // goto new web
 function showMd(md, changeUrl = true) {
     console.log('goto:' + md, 'changeUrl:' + changeUrl)
-    if (changeUrl) {
-        let encodeMd = encodeURIComponent(md)
-        let newSearch = niceObject(getUrlSearch()).set('md', encodeMd)
-        history.pushState({md: md}, md, toUrlSearch(newSearch))
-    }
+    // if (changeUrl) {
+    //     let encodeMd = encodeURIComponent(md)
+    //     let newSearch = niceObject(getUrlSearch()).set('md', encodeMd)
+    //     history.pushState({md: md}, md, toUrlSearch(newSearch))
+    // }
     md = decodeURIComponent(md)
     // console.log(md)
     let masterDiv = document.getElementById("master")
@@ -120,16 +122,23 @@ function equalsIgnoreURICode(a, b) {
     // console.log(decodeURIComponent(a) === decodeURIComponent(b))
     return decodeURIComponent(a) === decodeURIComponent(b)
 }
-function changeUrl(obj){
+
+function changeUrl(obj) {
+    let encode = encodeURIComponent(menu)
+    let newSearch = niceObject(getUrlSearch()).set('menu', encode)
+
+    history.pushState(obj, '', toUrelSearch(newSearch))
 
 }
+
+
 function showMenu(menu, changeUrl = true) {
     console.log('menu:' + menu)
-    if (changeUrl) {
-        let encode = encodeURIComponent(menu)
-        let newSearch = niceObject(getUrlSearch()).set('menu', encode)
-        history.pushState({menu: menu}, menu, toUrlSearch(newSearch))
-    }
+    // if (changeUrl) {
+    //     let encode = encodeURIComponent(menu)
+    //     let newSearch = niceObject(getUrlSearch()).set('menu', encode)
+    //     history.pushState({menu: menu}, menu, toUrlSearch(newSearch))
+    // }
     loadConf
         .then((data) => {
             let menuObj = data['menus'][menu]
@@ -150,6 +159,7 @@ function showMenu(menu, changeUrl = true) {
                             // console.log(gotoMd && !equalsIgnoreURICode(gotoMd, search['md']) )
                             gotoMd && !equalsIgnoreURICode(gotoMd, search['md']) && showMd(gotoMd)
                             dir && !equalsIgnoreURICode(dir, search['menu']) && showMenu(dir)
+
                             // if (gotoMd) {
                             // } else if (dir) {
                             // }

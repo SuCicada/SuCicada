@@ -49,10 +49,59 @@ sudo apt-get install openjdk-8-jdk -y
 sudo apt install scala -y
 ```
 
-### ruby
+### ~~ruby~~
 ```
 sudo add-apt-repository ppa:brightbox/ruby-ng
 sudo apt-get update
 sudo apt-get purge --auto-remove ruby
 sudo apt-get install ruby2.7 ruby2.7-dev
+```
+
+### pip
+```
+# change source
+mkdir ~/.pip
+echo -e " 
+[global]
+index-url = https://mirrors.aliyun.com/pypi/simple
+" > ~/.pip/pip.conf
+```
+
+### vim
+```
+echo -e "
+set ts=4
+set expandtab
+set autoindent
+" >> ~/.vimrc
+```
+
+#### tmux
+```
+echo -e "
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
+" >> ~/.tmux
+```
+
+#### supervisor
+```
+sudo apt install supervisor 
+echo -e "
+[Unit]
+Description=Process Monitoring and Control Daemon
+After=rc-local.service nss-user-lookup.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+
+[Install]
+WantedBy=multi-user.target
+" | tee /usr/lib/systemd/system/supervisord.service
+
+sudo systemctl enable supervisord
+sudo systemctl is-enabled supervisord
 ```
