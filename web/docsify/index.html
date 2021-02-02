@@ -9,45 +9,79 @@
 </head>
 <body>
 <div id="app">Please wait...</div>
+<div id="mb-footer"></div>
 <script>
     window.$docsify = {
         name: '<span>SuCicada</span>',
         basePath: '../../docs/',
         loadNavbar: true,
+        // relativePath: true,
+        mergeNavbar: true,
+        auto2top: true,
+        autoHeader: true,
+        executeScript: true,
         loadSidebar: true,
-        // hideSidebar: true,
+        hideSidebar: false,
         coverpage: true,
         themeColor: '#b53f4d',
+        markdown: {
+            breaks: true,
+            gfm: true,
+            smartypants: true,
+
+        },
         // homepage: 'README.md'
+        toc: {
+            // scope: '.markdown-section',
+            // headings: 'h1, h2, h3, h4, h5, h6',
+            // title: 'Table of Contents',
+        },
+        Valine: {
+            appId: 'wBepOqMa9wOpGCQxCgq2zd1j-MdYXbMMI',
+            appKey: 'QvyoFk12oGmpJzO90toq1nhF',
+            // docPath: 'hash', //default to `hash` ,or you can choose `full`
+        },
+        autoFooter: {
+            name: "121323",          // company display name (required)
+            copyYear: 2222,             // start copyright year (required)
+            // url:       "adsf",          // company url (optional)
+            // policy:    true,   // show Privacy Policy (optional)
+            // terms:     true,   // show Terms of Service (optional)
+            // cookies:   true    // show Cookies Policy (optional)
+        },
+        alias: {
+            '/.*/_sidebar.md': '/_sidebar.md',
+        },
+        subMaxLevel: 3,
+        sidebarDisplayLevel: 1, // set sidebar display level
     }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>-->
-<!--<script>-->
-<!--    new Darkmode({-->
-<!--        bottom: '57px', // default: '32px'-->
-<!--        right: '32px', // default: '32px'-->
-<!--        left: 'unset', // default: 'unset'-->
-<!--        // time: '0.5s', // default: '0.3s'-->
-<!--        // mixColor: '#ffffff', // default: '#fff'-->
-<!--        // backgroundColor: '#d3d3d3',  // default: '#fff'-->
-<!--        // buttonColorDark: 'rgba(16,15,44,0.31)',  // default: '#100f2c'-->
-<!--        // buttonColorLight: 'rgba(255,255,255,0.3)', // default: '#fff'-->
-<!--        saveInCookies: true, // default: true,-->
-<!--        // autoMatchOsTheme: true // default: true-->
-<!--        // bottom: '64px', // default: '32px'-->
-<!--        // right: 'unset', // default: '32px'-->
-<!--        // left: '32px', // default: 'unset'-->
-<!--        time: '0.5s', // default: '0.3s'-->
-<!--        mixColor: '#fff', // default: '#fff'-->
-<!--        backgroundColor: '#fff',  // default: '#fff'-->
-<!--        buttonColorDark: '#100f2c',  // default: '#100f2c'-->
-<!--        buttonColorLight: '#fff', // default: '#fff'-->
-<!--        // saveInCookies: false, // default: true,-->
-<!--        label: '🌓', // default: ''-->
-<!--        autoMatchOsTheme: true // default: true-->
-<!--    })-->
-<!--        .showWidget();-->
-<!--</script>-->
+<script src="https://unpkg.com/docsify/lib/docsify.min.js"></script>
+
+
+<!--    docsify-dark-mode-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
+
+<!--    docsify-valine-->
+<script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://unpkg.com/docsify-valine/dist/docsify-valine.min.js"></script>
+
+<!--    docsify-sidebarfooter-->
+<!--<script src="https://cdn.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script>-->
+
+<!--    Docsify Table of Contents-->
+<!--<link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">-->
+<!--<script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>-->
+
+<!--    docsify-copy-code-->
+<script src="https://unpkg.com/docsify-copy-code@2"></script>
+
+<!--    docsify-sidebar-collapse-->
+<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+<!--    docsify-wikilink-->
+<script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
+
 </body>
 </html>

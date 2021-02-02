@@ -1,12 +1,16 @@
 - [summary-task](task/summary.md)
 - [关于屠龙之术](log/关于屠龙之术.md)
-我是谁。我意图通过解释人的认知来解决关于人的不可控的心理活动的问题。
+我们是谁。我们意图通过解释人的认知来解决关于人的不可控的心理活动的问题。
 
 我们致力于通过表里并行的方式来解决边缘性人格障碍。
 
 我们渴望真正的屠龙之术。
 
+[![](https://github-readme-stats.vercel.app/api?username=SuCicada&count_private=true&show_icons=true&custom_title=Github%20Status&hide=issues&theme=dark)](https://github.com/SuCicada)
 
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SuCicada&langs_count=8&layout=compact)](https://github.com/SuCicada)
+
+[![willianrod's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada)](https://github.com/SuCicada)
 
 我们比机器强的地方就是在于我们能进行超脱常理的思考。
 我们的情感，我们的生理局限性造就了我们在有限的资源，有限的生命中产出大量超脱的思想。
@@ -33,3 +37,4 @@
 比如你发现冬日里出现了久违的阳光，让你的屋子黄灿灿，暖呼呼，十分舒服。但是这个时候你不是很想拉开窗帘去感受阳光的意境。
 你又害怕因为错失美好，而成为了一种“机会在身边，不去抓住”的批判对象。
 你很愤恨。
+
