@@ -8,3 +8,5 @@
 我们意图通过解释并控制认知来使个人达到更大的进步。
 
 [请加入我们](sucicada.md)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/19a619d9-7f66-48a0-b581-997ccec9ae30/deploy-status)](https://app.netlify.com/sites/sucicada/deploys)
