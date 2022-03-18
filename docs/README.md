@@ -12,3 +12,4 @@
 [![wakatime](https://wakatime.com/badge/user/3fc02189-032a-48aa-9fc5-2a62f91ef4f9.svg)](https://wakatime.com/@3fc02189-032a-48aa-9fc5-2a62f91ef4f9)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/19a619d9-7f66-48a0-b581-997ccec9ae30/deploy-status)](https://app.netlify.com/sites/sucicada/deploys)
+[![Build](https://github.com/SuCicada/android.sucicada.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/SuCicada/android.sucicada.github.io/actions/workflows/main.yml)
