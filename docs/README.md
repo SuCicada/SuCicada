@@ -15,7 +15,7 @@
 
 android.sucicada.github.io:[![Build](https://github.com/SuCicada/android.sucicada.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/SuCicada/android.sucicada.github.io/actions/workflows/main.yml)
 
-![SuCicada's GitHub stats](https://github-readme-stats.vercel.app/api?username=SuCicada&show_icons=true&theme=default) 
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SuCicada&layout=compact)](https://github.com/SuCicada)
 
 | ![SuCicada's GitHub stats](https://github-readme-stats.vercel.app/api?username=SuCicada&show_icons=true&theme=default) | [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://github.com/SuCicada) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
