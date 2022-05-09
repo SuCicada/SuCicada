@@ -9,7 +9,7 @@
 
 [请加入我们](https://sucicada.github.io)
 
-[![wakatime](https://wakatime.com/badge/user/3fc02189-032a-48aa-9fc5-2a62f91ef4f9.svg)](https://wakatime.com/@3fc02189-032a-48aa-9fc5-2a62f91ef4f9)
+[![wakatime](https://wakatime.com/badge/user/3fc02189-032a-48aa-9fc5-2a62f91ef4f9.svg)](https://wakatime.com/@SuCicada)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/19a619d9-7f66-48a0-b581-997ccec9ae30/deploy-status)](https://app.netlify.com/sites/sucicada/deploys)
 
@@ -17,5 +17,5 @@ android.sucicada.github.io:[![Build](https://github.com/SuCicada/android.sucicad
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SuCicada&layout=compact)](https://github.com/SuCicada)
 
-| ![SuCicada's GitHub stats](https://github-readme-stats.vercel.app/api?username=SuCicada&show_icons=true&theme=default) | [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://github.com/SuCicada) |
+| ![SuCicada's GitHub stats](https://github-readme-stats.vercel.app/api?username=SuCicada&show_icons=true&theme=default) | [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://wakatime.com/@SuCicada) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
