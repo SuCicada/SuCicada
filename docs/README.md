@@ -20,7 +20,12 @@
 [![Deploy Hugo](https://github.com/SuCicada/mysite-hugo/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/SuCicada/mysite-hugo/actions/workflows/gh-pages.yml)
 
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SuCicada&layout=compact)](https://github.com/SuCicada)
-
 | ![SuCicada's GitHub stats](https://github-readme-stats.vercel.app/api?username=SuCicada&show_icons=true&theme=default) | [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://wakatime.com/@SuCicada) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+<details>
+<summary> more graph </summary>
+  
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SuCicada&layout=compact)](https://github.com/SuCicada)
+
+</details>
