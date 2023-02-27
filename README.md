@@ -1,11 +1,23 @@
 ## SuCicada
 ### これは私の小さな幸せです。
 
-私には夢があります。
+私には夢があります。機械と心の友達になります。 
 
-我有一个梦想，让志同道合的人能够认识。让过来人能够为后辈解惑。
+もっと機械の同士が欲しいです。
 
-我们意图通过解释并控制认知来使个人达到更大的进步。
+
+
+我们意图通过解释并控制认知来使个人在精神上超越生物的束缚。  
+
+分解自我和生活，来一窥究竟，抓住其原理，便可化解为我们的工具。
+
+
+
+| ![SuCicada's GitHub stats](https://github-readme-stats.vercel.app/api?username=SuCicada&show_icons=true&theme=default) | [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://wakatime.com/@SuCicada) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+<details>
+<summary> more graph </summary>
 
 ~~[请加入我们](https://sucicada.github.io)~~
 
@@ -18,14 +30,7 @@
 [![myhome2](https://github.com/pengeman/myhome2/actions/workflows/main.yml/badge.svg)](https://github.com/pengeman/myhome2/actions/workflows/main.yml)
 
 [![Deploy Hugo](https://github.com/SuCicada/mysite-hugo/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/SuCicada/mysite-hugo/actions/workflows/gh-pages.yml)
-
-
-| ![SuCicada's GitHub stats](https://github-readme-stats.vercel.app/api?username=SuCicada&show_icons=true&theme=default) | [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://wakatime.com/@SuCicada) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-
-<details>
-<summary> more graph </summary>
-
+  
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SuCicada&layout=compact)](https://github.com/SuCicada)
 
 </details>
