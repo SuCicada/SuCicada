@@ -11,13 +11,13 @@
 
 分解自我和生活，来一窥究竟，抓住其原理，便可化解为我们的工具。
 
+ [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://wakatime.com/@SuCicada) 
 
-
-| ![SuCicada's GitHub stats](https://github-readme-stats.vercel.app/api?username=SuCicada&show_icons=true&theme=default) | [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://wakatime.com/@SuCicada) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <details>
 <summary> more graph </summary>
+| ![SuCicada's GitHub stats](https://github-readme-stats.vercel.app/api?username=SuCicada&show_icons=true&theme=default) | |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 ~~[请加入我们](https://sucicada.github.io)~~
 
