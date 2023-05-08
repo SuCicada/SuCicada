@@ -11,7 +11,8 @@
 
 分解自我和生活，来一窥究竟，抓住其原理，便可化解为我们的工具。
 
- [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://wakatime.com/@SuCicada) 
+<a href="https://wakatime.com"><img src="https://wakatime.com/share/@SuCicada/5efc4132-7d2d-4f40-bd9b-a21a5b8e9a42.png" /></a>
+<!--  [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact)](https://wakatime.com/@SuCicada)  -->
 
 
 <details>
