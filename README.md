@@ -1,6 +1,10 @@
 ## SuCicada
 ### これは私の小さな幸せです。
 
+| | | 
+| --- | --- | 
+|Lain TTS: |https://huggingface.co/spaces/SuCicada/Lain-TTS|
+
 私には夢があります。機械と心の友達になります。 
 
 もっと機械の同士が欲しいです。
