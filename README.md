@@ -1,20 +1,25 @@
 ## SuCicada
 ### これは私の小さな幸せです。
+パソコンが好き、コートを開発が好き、ボカロが好き、日本の環境が好き
 
-| | | 
+
+## 私のプロジェクト：
+|     |     | 
 | --- | --- | 
-|Lain TTS: |https://huggingface.co/spaces/SuCicada/Lain-TTS|
+|日本語聖書（新共同訳）: |https://japanese-holy-bible.vercel.app/bible|
 
-私には夢があります。機械と心の友達になります。 
 
+## 好きな言葉：
+>6 どんなことでも、思い煩うのはやめなさい。何事につけ、感謝を込めて祈りと願いをささげ、求めているものを神に打ち明けなさい。 <br>
+>7 そうすれば、あらゆる人知を超える神の平和が、あなたがたの心と考えとをキリスト・イエスによって守るでしょう。 <br>
+>-- (フィリピの信徒への手紙 4)
+
+## 現在の願う
 もっと機械の同士が欲しいです。
 
 
 
-我们意图通过解释并控制认知来使个人在精神上超越生物的束缚。  
-
-分解自我和生活，来一窥究竟，抓住其原理，便可化解为我们的工具。
-
+## 他の
 <!-- <a href="https://wakatime.com"><img src="https://wakatime.com/share/@SuCicada/5efc4132-7d2d-4f40-bd9b-a21a5b8e9a42.png" /></a> -->
  [![SuCicada's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=SuCicada&layout=compact&range=last_7_days)](https://wakatime.com/@SuCicada) 
 
